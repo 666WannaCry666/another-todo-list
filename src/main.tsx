@@ -1,9 +1,18 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
+import { StrictMode } from 'react';
+import { attachReduxDevTools } from '@effector/redux-devtools-adapter';
+import './index.css';
+import ReactDOM from 'react-dom/client';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    
-  </StrictMode>,
-)
+function renderApp() {
+    ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+        <StrictMode>
+            
+        </StrictMode>
+    );
+}
+
+(function runApp() {
+    attachReduxDevTools();
+
+    renderApp();
+})();
