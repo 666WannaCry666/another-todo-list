@@ -13,17 +13,19 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": "src",
     "typeRoots": [
       "./node_modules/@types",
       "./types"
-    ]
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    },
   },
   "include": [
     "src"
